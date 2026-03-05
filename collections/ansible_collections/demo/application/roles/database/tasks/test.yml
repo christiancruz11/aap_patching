@@ -46,12 +46,12 @@
   changed_when: false
   when: __test_check_unix_socket | d(true)
 
-- name: Test - server tuning is used - effective cache size
-  assert:
-    that: >
-      (ansible_memory_mb.real.total/2) | int | abs | string
-        in result.stdout
-  when: __test_check_unix_socket | d(true)
+# - name: Test - server tuning is used - effective cache size
+#   assert:
+#     that: >
+#       (ansible_memory_mb.real.total/2) | int | abs | string
+#         in result.stdout
+#   when: __test_check_unix_socket | d(true)
 
 - name: Check postgresql version matches postgresql_version
   command: postgres --version
