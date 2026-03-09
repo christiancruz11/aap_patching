@@ -21,7 +21,7 @@
       - name: FORCE FAILURE FOR DEMO
         ansible.builtin.fail:
           msg: "Simulating a patching failure for demo purposes."
-          when: force_failure_apply_patch | default(false) | bool
+        when: force_failure_apply_patch | default(false) | bool
                 
       - name: Include patching role
         ansible.builtin.include_role:
