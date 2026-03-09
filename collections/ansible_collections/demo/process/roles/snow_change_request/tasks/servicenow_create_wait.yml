@@ -24,7 +24,7 @@
 
 - name: Display Change Request number
   ansible.builtin.debug:
-    var: request
+    var: request.record.number
 
 # - name: Send Approval e-mail
 #   community.general.mail:
