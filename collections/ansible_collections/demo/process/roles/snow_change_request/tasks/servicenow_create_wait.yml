@@ -22,6 +22,10 @@
     per_host: false
   delegate_to: localhost
 
+- name: Display Change Request number
+  ansible.builtin.debug:
+    var: request
+
 # - name: Send Approval e-mail
 #   community.general.mail:
 #     host: "{{ EMAIL_HOST }}"
