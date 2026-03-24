@@ -7,7 +7,7 @@
 
   vars:
     slack_message: >-
-      The change has been closed with {{ cr_close_status }} result.
+      The change has been closed with "{{ cr_close_status |default('successful')}}" result.
       Please go to <http://{{ public_ip_address }}>
 
   roles:
